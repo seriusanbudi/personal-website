@@ -83,6 +83,7 @@ const HomePage = () => {
                 key={social.key}
                 href={social.link}
                 target="_blank"
+                rel="noreferrer"
                 className="p-2 hover:bg-black hover:text-white text-lg md:text-2xl"
               >
                 {social.icon}
