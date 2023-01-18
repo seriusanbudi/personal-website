@@ -1,9 +1,12 @@
+import useTime from "@/hooks/useTime";
+
 import {
   IoLogoGithub,
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoTwitter,
   IoMoonOutline,
+  IoSunnyOutline,
 } from "react-icons/io5";
 
 const socials = [
@@ -43,22 +46,26 @@ const SplitAndSpread = (props: { children: string }) => {
 };
 
 const HomePage = () => {
+  const { date, time, isNight } = useTime();
+
   return (
-    <div className="h-screen w-full flex flex-col justify-between p-10">
-      <div className="h-[40px] flex items-center">
-        <div className="bg-black flex-1 h-full text-white mr-1 p-2 text-sm flex items-center justify-center">
-          Tue, 17 Jan 2023
-        </div>
-        <div className="bg-black h-full text-white mr-1 p-2 text-sm flex items-center justify-center">
-          11:30 PM
-        </div>
-        <div className="bg-black text-white h-[40px] w-[40px] flex items-center justify-center">
-          <IoMoonOutline />
+    <div className="h-screen w-full flex flex-col md:flex-row items-center justify-between p-10 md:p-20">
+      <div className="w-full flex justify-center md:hidden">
+        <div className="w-full max-w-[295px] h-[40px] flex items-center">
+          <div className="bg-black flex-1 h-full text-white mr-1 p-2 text-sm flex items-center justify-center">
+            {date}
+          </div>
+          <div className="bg-black flex-none w-[80px] h-full text-white mr-1 p-2 text-sm flex items-center justify-center">
+            {time}
+          </div>
+          <div className="bg-black text-white h-[40px] w-[40px] flex items-center justify-center">
+            {isNight ? <IoMoonOutline /> : <IoSunnyOutline />}
+          </div>
         </div>
       </div>
 
-      <div className="w-full flex flex-row md:flex-col justify-center">
-        <div className="w-full max-w-[295px]">
+      <div className="w-full flex flex-row justify-center md:justify-between md:items-center">
+        <div className="w-full max-w-[295px] md:max-w-[520px]">
           <div className="text-4xl md:text-7xl font-bold mb-4 w-full">
             <SplitAndSpread>BUDIHARTA</SplitAndSpread>
             <SplitAndSpread>FRONTEND</SplitAndSpread>
@@ -70,7 +77,7 @@ const HomePage = () => {
             </div>
             <SplitAndSpread>DEV3LOPER</SplitAndSpread>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end md:justify-start">
             {socials.map((social) => (
               <a
                 key={social.key}
@@ -83,8 +90,18 @@ const HomePage = () => {
             ))}
           </div>
         </div>
+
+        <div className="hidden md:block">
+          <a
+            href="mailto:budiharta_21@live.com"
+            className="text-xl border-4 w-full max-w-[295px] border-black py-4 px-20 text-center font-bold hover:bg-black hover:text-white"
+          >
+            CONTACT
+          </a>
+        </div>
       </div>
-      <div className="flex justify-center">
+
+      <div className="flex w-full justify-center md:hidden">
         <a
           href="mailto:budiharta_21@live.com"
           className="text-xl border-4 w-full max-w-[295px] border-black py-4 text-center font-bold hover:bg-black hover:text-white"
