@@ -46,7 +46,7 @@ const HomePage = () => {
     <div className="h-screen w-full flex items-center justify-center">
       <div className="w-full px-20 h-fit flex justify-between">
         <div>
-          <div className="text-7xl font-bold mb-8">
+          <div className="text-7xl font-bold mb-8 w-[420px]">
             <SplitAndSpread>BUDIHARTA</SplitAndSpread>
             <SplitAndSpread>FRONTEND</SplitAndSpread>
             <div className="flex justify-between items-center">
