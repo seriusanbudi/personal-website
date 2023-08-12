@@ -48,7 +48,7 @@ const HomePage = () => {
         </div>
         <div className="flex justify-end">
           <div className="flex items-center w-full">
-            <div className="w-full h-[4px] bg-black"></div>
+            <div className="w-full h-[4px] bg-black mr-2" />
           </div>
           <div className="flex flex-none w-fit">
             {socials.map((social) => (
