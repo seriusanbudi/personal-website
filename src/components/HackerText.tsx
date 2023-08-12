@@ -18,7 +18,7 @@ export default function HackerText(props: any) {
     const interval = setInterval(() => {
       const newWords = words
         .split("")
-        .map((_, index: number) => {
+        .map((_: string, index: number) => {
           if (index < iterations) return children[index];
 
           return letters[Math.floor(Math.random() * 26)];
