@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export default function HackerText(props: any) {
   const { children } = props;
   const [words, setWords] = useState(children);
-  const [animation, setAnimating] = useState(false);
+  const [animating, setAnimating] = useState(false);
 
   function animate() {
-    if (animation) return false;
+    if (animating) return false;
 
     let iterations = -1;
     setAnimating(true);
@@ -38,7 +38,7 @@ export default function HackerText(props: any) {
 
   return (
     <div
-      className="cursor-default p-1 select-none w-fit text-black bg-transparent hover:text-white hover:bg-black"
+      className="cursor-default p-1 select-none w-fit text-black bg-transparent"
       onMouseEnter={animate}
     >
       {words.split("").map((word: string, i: number) => (
