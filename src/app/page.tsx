@@ -1,9 +1,10 @@
-import useTime from "@/hooks/useTime";
+"use client";
+
+import useTime from "hooks/useTime";
 
 import {
   IoLogoGithub,
   IoLogoInstagram,
-  IoLogoLinkedin,
   IoLogoTwitter,
   IoMoonOutline,
   IoSunnyOutline,
@@ -14,11 +15,6 @@ const socials = [
     key: "github",
     link: "https://github.com/seriusanbudi",
     icon: <IoLogoGithub />,
-  },
-  {
-    key: "linkedin",
-    link: "https://www.linkedin.com/in/budiharta/",
-    icon: <IoLogoLinkedin />,
   },
   {
     key: "instagram",
