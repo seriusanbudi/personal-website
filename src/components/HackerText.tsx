@@ -36,6 +36,10 @@ export default function HackerText(props: any) {
     }, 50);
   }
 
+  useEffect(() => {
+    animate();
+  }, []);
+
   return (
     <div
       className="cursor-default p-1 select-none w-fit text-black bg-transparent"

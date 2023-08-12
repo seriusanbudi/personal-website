@@ -1,8 +1,5 @@
-"use client";
-
 import HackerText from "components/HackerText";
 import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
-import { motion } from "framer-motion";
 
 const socials = [
   {
@@ -25,18 +22,10 @@ const socials = [
 const HomePage = () => {
   return (
     <div className="h-screen w-full flex items-center justify-center">
-      <div className="w-full max-w-[295px] md:max-w-[520px]">
+      <div className="w-full max-w-[220px] md:max-w-[420px]">
         <div className="text-4xl md:text-7xl font-bold mb-4 w-full">
           {["BUDIHARTA", "FRONTEND", "WEB", "DEV3LOPER"].map((text, i) => (
-            <div className="overflow-hidden" key={i}>
-              <motion.div
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={{ delay: (0.2 * i) / 5, duration: 0.2 }}
-              >
-                <HackerText>{text}</HackerText>
-              </motion.div>
-            </div>
+            <HackerText key={i}>{text}</HackerText>
           ))}
         </div>
         <div className="flex justify-end">
