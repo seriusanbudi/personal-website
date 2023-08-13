@@ -4,7 +4,7 @@ import "styles/globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "budiharta",
+  title: "Budiharta",
   description:
     "Passionate and creative frontend developer based in Bali, Indonesia, specializing in Next.js, Tailwind CSS, and Framer Motion. Delivering exceptional websites with seamless animations and responsive design.",
 };
