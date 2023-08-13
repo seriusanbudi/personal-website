@@ -23,7 +23,7 @@ const contactCopy = ["Get in touch", "Let's work together", "Contact me"];
 
 const HomePage = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-center">
+    <div className="h-screen w-full flex items-center justify-center p-10 md:p-0">
       <div className="w-full max-w-[420px] md:max-w-[420px]">
         <div className="text-5xl md:text-7xl font-bold mb-4 w-full">
           {["BUDIHARTA", "FRONTEND", "WEB", "DEV3LOPER"].map((text, i) => (
