@@ -19,29 +19,25 @@ const socials = [
   },
 ];
 
-const contactCopy = [
-  "Get in touch",
-  "Let's work together",
-  "Let's build something cool",
-];
+const contactCopy = ["Get in touch", "Let's work together", "Contact me"];
 
 const HomePage = () => {
   return (
     <div className="h-screen w-full flex items-center justify-center">
-      <div className="w-full max-w-[220px] md:max-w-[420px]">
-        <div className="text-4xl md:text-7xl font-bold mb-4 w-full">
+      <div className="w-full max-w-[420px] md:max-w-[420px]">
+        <div className="text-5xl md:text-7xl font-bold mb-4 w-full">
           {["BUDIHARTA", "FRONTEND", "WEB", "DEV3LOPER"].map((text, i) => (
             <HackerText key={i}>{text}</HackerText>
           ))}
         </div>
-        <div className="flex justify-end">
+        <div className="grid gap-4 md:flex md:justify-end">
           <button className="relative whitespace-nowrap py-2 px-4 border-2 border-white mr-4 group overflow-hidden flex-none">
             <span className="text-white group-hover:text-black font-bold">
               {contactCopy[Math.floor(Math.random() * contactCopy.length)]}
             </span>
             <div className="absolute top-[100%] left-0 right-0 h-full bg-white z-[-1] group-hover:top-0 transition-all" />
           </button>
-          <div className="flex items-center w-full">
+          <div className="hidden md:flex items-center w-full">
             <div className="w-full h-[4px] bg-white mr-2" />
           </div>
           <div className="flex flex-none w-fit">

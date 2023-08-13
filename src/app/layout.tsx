@@ -1,3 +1,4 @@
+import Background from "components/Background";
 import Cursor from "components/Cursor";
 import "styles/globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         {children}
 
         <Cursor />
+        <Background />
       </body>
     </html>
   );
