@@ -1,6 +1,8 @@
 import HackerText from "components/HackerText";
 import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
 
+export const revalidate = 3600; // revalidate at most every hour
+
 const socials = [
   {
     key: "github",
