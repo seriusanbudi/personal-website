@@ -31,12 +31,15 @@ const HomePage = () => {
           ))}
         </div>
         <div className="grid gap-4 md:flex md:justify-end">
-          <button className="relative whitespace-nowrap py-2 px-4 border-2 border-white mr-4 group overflow-hidden flex-none">
+          <a
+            href="mailto:budiharta_21@live.com"
+            className="relative whitespace-nowrap py-2 px-4 border-2 border-white mr-4 group overflow-hidden flex-none"
+          >
             <span className="text-white group-hover:text-black font-bold">
               {contactCopy[Math.floor(Math.random() * contactCopy.length)]}
             </span>
             <div className="absolute top-[100%] left-0 right-0 h-full bg-white z-[-1] group-hover:top-0 transition-all" />
-          </button>
+          </a>
           <div className="hidden md:flex items-center w-full">
             <div className="w-full h-[4px] bg-white mr-2" />
           </div>
