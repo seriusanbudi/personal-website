@@ -44,9 +44,9 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="hidden md:flex fixed items-center justify-center h-[20px] w-[20px] left-0 top-0 rounded-full bg-transparent border-2 border-black pointer-events-none z-[99999]"
+      className="hidden md:flex fixed items-center justify-center h-[20px] w-[20px] left-0 top-0 rounded-full bg-transparent border-2 border-white pointer-events-none z-[99999]"
     >
-      <div className="h-[4px] w-[4px] bg-black rounded-full" />
+      <div className="h-[4px] w-[4px] bg-white rounded-full" />
     </div>
   );
 }

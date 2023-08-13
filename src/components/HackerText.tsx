@@ -42,7 +42,7 @@ export default function HackerText(props: any) {
 
   return (
     <div
-      className="cursor-default p-1 select-none w-fit text-black bg-transparent"
+      className="cursor-default p-1 select-none w-fit bg-transparent"
       onMouseEnter={animate}
     >
       {words.split("").map((word: string, i: number) => (

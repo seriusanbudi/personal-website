@@ -19,6 +19,12 @@ const socials = [
   },
 ];
 
+const contactCopy = [
+  "Get in touch",
+  "Let's work together",
+  "Let's build something cool",
+];
+
 const HomePage = () => {
   return (
     <div className="h-screen w-full flex items-center justify-center">
@@ -29,8 +35,14 @@ const HomePage = () => {
           ))}
         </div>
         <div className="flex justify-end">
+          <button className="relative whitespace-nowrap py-2 px-4 border-2 border-white mr-4 group overflow-hidden flex-none">
+            <span className="text-white group-hover:text-black font-bold">
+              {contactCopy[Math.floor(Math.random() * contactCopy.length)]}
+            </span>
+            <div className="absolute top-[100%] left-0 right-0 h-full bg-white z-[-1] group-hover:top-0 transition-all" />
+          </button>
           <div className="flex items-center w-full">
-            <div className="w-full h-[4px] bg-black mr-2" />
+            <div className="w-full h-[4px] bg-white mr-2" />
           </div>
           <div className="flex flex-none w-fit">
             {socials.map((social) => (
@@ -39,9 +51,10 @@ const HomePage = () => {
                 href={social.link}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 hover:bg-black hover:text-white text-lg md:text-2xl"
+                className="p-2 relative group text-lg md:text-2xl overflow-hidden"
               >
-                {social.icon}
+                <span className="group-hover:text-black">{social.icon}</span>
+                <div className="absolute top-[100%] left-0 right-0 h-full bg-white z-[-1] group-hover:top-0 transition-all" />
               </a>
             ))}
           </div>
