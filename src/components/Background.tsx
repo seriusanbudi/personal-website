@@ -17,8 +17,8 @@ export default function Background() {
 
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      context.strokeStyle = "rgba(204, 204, 204, 0.1)";
-      context.lineWidth = 2;
+      context.strokeStyle = "rgba(204, 204, 204, 0.2)";
+      context.lineWidth = 4;
 
       for (let x = 0; x < canvas.width * 2; x += gridSize) {
         context.beginPath();
