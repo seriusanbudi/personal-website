@@ -11,15 +11,20 @@ export default function TestPage() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div>
+      <div className="w-full">
         <div className="text-center font-bold mb-10">
           Hello! {country ? country : "unknown place"}
         </div>
-        <div className="p-10">
-          <ul>
+        <div className="p-10 w-full">
+          <ul className="grid gap-2">
             {allHeaders.map((header) => (
-              <li key={header.key}>
-                <span className="font-bold">{header.key}</span>: {header.value}
+              <li key={header.key} className="w-full">
+                <span className="font-bold">{header.key}</span>:{" "}
+                <input
+                  readOnly
+                  value={header.value}
+                  className="w-full max-w-[80vw] bg-transparent underline"
+                />
               </li>
             ))}
           </ul>
