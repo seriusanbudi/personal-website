@@ -18,7 +18,7 @@ export default function TestPage() {
         <div className="p-10">
           <ul>
             {allHeaders.map((header) => (
-              <li>
+              <li key={header.key}>
                 <span className="font-bold">{header.key}</span>: {header.value}
               </li>
             ))}
