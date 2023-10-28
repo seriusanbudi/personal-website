@@ -15,7 +15,15 @@ export default function TestPage() {
         <div className="text-center font-bold mb-10">
           Hello! {country ? country : "unknown place"}
         </div>
-        <div className="p-10">{JSON.stringify(allHeaders)}</div>
+        <div className="p-10">
+          <ul>
+            {allHeaders.map((header) => (
+              <li>
+                <span className="font-bold">{header.key}</span>: {header.value}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
