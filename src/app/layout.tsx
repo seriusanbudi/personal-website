@@ -2,6 +2,7 @@ import Background from "components/Background";
 import Cursor from "components/Cursor";
 import "styles/globals.css";
 import type { Metadata } from "next";
+import LogRocket from "components/LogRocket";
 
 export const metadata: Metadata = {
   title: "Budiharta",
@@ -33,6 +34,8 @@ export default function RootLayout({
 
         <Cursor />
         <Background />
+
+        <LogRocket />
       </body>
     </html>
   );
