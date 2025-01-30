@@ -7,6 +7,8 @@ export default function Background() {
   const gridSize = 100;
   const parallaxFactor = 0.05; // Adjust this to control the parallax effect
 
+  // put somthing for push
+
   useEffect(() => {
     const canvas: any = canvasRef.current;
     const context = canvas.getContext("2d");
